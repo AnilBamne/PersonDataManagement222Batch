@@ -10,7 +10,8 @@ namespace PersonDataManagement222Batch
             Console.WriteLine("Welcome to PERSON DATA MANAGEMENT program");
             List<Person> list = new List<Person>();
             AddingPersonDetailsToList(list);
-            DisplayPersonDetails(list);
+            PersonDataManager.RetriveTop2RecordsByAge(list);
+           
         }
         /// <summary>
         /// Adding the details of each person to the list

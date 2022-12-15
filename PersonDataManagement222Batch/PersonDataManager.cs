@@ -65,11 +65,27 @@ namespace PersonDataManagement222Batch
         /// *** Sorting **** is must,because if once condition fails program execution stops and returns result up to that step only.
         /// </summary>
         /// <param name="list"></param>
-        public static void SkipPersonIfAgeLessThanAge60(List<Person> list)       //UC6
+        public static void SkipPersonIfAgeLessThanAge60(List<Person> list)       
         {
             Console.WriteLine("\nSkipping the records whose age is less than 60,Remaining records are :"); 
             List<Person> data = list.OrderBy(p => p.Age).SkipWhile(p => p.Age < 60).ToList(); 
             Program.DisplayPersonDetails(data);
+        }
+
+        /// <summary>
+        /// Removing sspecific name(person) from the list.
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="name"></param>
+        public static void RemoveSpecificName(List<Person> list, string name)       
+        {
+            list.RemoveAll(p => (p.Name == name));
+            if (list.TrueForAll(e => e.Name != name))
+            {
+                Console.WriteLine("{0} has been removed from the list",name);
+                Console.WriteLine("List after removal is :");
+                Program.DisplayPersonDetails(list);
+            }
         }
     }
 }

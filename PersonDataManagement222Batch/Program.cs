@@ -10,7 +10,7 @@ namespace PersonDataManagement222Batch
             Console.WriteLine("Welcome to PERSON DATA MANAGEMENT program");
             List<Person> list = new List<Person>();
             AddingPersonDetailsToList(list);
-            Console.WriteLine("Choose option \n1:RetriveTop2RecordsByAge\n2:GetAllRecordsBetween13To18Only\n3:RetriveAverageAge\n4:SearchSpecificPerson\n5:SkipRecordForAgeBelow60");
+            Console.WriteLine("Choose option \n1:RetriveTop2RecordsByAge\n2:GetAllRecordsBetween13To18Only\n3:RetriveAverageAge\n4:SearchSpecificPerson\n5:SkipRecordForAgeBelow60\n6:RemoveSpecificName");
             int option=int.Parse(Console.ReadLine());
             switch (option)
             {
@@ -30,6 +30,7 @@ namespace PersonDataManagement222Batch
                     PersonDataManager.SkipPersonIfAgeLessThanAge60(list);
                     break;
                 case 6:
+                    PersonDataManager.RemoveSpecificName(list, "Anil");
                     break;
                 default:
                     break;

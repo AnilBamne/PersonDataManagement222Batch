@@ -83,7 +83,7 @@ namespace PersonDataManagement222Batch
             if (list.TrueForAll(e => e.Name != name))
             {
                 Console.WriteLine("{0} has been removed from the list",name);
-                Console.WriteLine("List after removal is :");
+                Console.WriteLine("List after removal is:");
                 Program.DisplayPersonDetails(list);
             }
         }

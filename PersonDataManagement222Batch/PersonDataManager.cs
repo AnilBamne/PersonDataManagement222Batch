@@ -59,5 +59,17 @@ namespace PersonDataManagement222Batch
                 return default;
             }
         }
+
+        /// <summary>
+        /// Skipping the records whose age is less than 60
+        /// *** Sorting **** is must,because if once condition fails program execution stops and returns result up to that step only.
+        /// </summary>
+        /// <param name="list"></param>
+        public static void SkipPersonIfAgeLessThanAge60(List<Person> list)       //UC6
+        {
+            Console.WriteLine("\nSkipping the records whose age is less than 60,Remaining records are :"); 
+            List<Person> data = list.OrderBy(p => p.Age).SkipWhile(p => p.Age < 60).ToList(); 
+            Program.DisplayPersonDetails(data);
+        }
     }
 }

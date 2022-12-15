@@ -26,6 +26,11 @@ namespace PersonDataManagement222Batch
                 case 4:
                     PersonDataManager.SearchSpecificPerson(list,"Anil");
                     break;
+                case 5:
+                    PersonDataManager.SkipPersonIfAgeLessThanAge60(list);
+                    break;
+                case 6:
+                    break;
                 default:
                     break;
             }

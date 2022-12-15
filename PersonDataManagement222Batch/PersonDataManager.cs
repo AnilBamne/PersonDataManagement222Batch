@@ -29,5 +29,15 @@ namespace PersonDataManagement222Batch
             List<Person> teenageRecords = list.Where(p => p.Age > 13 && p.Age < 18).ToList();
             Program.DisplayPersonDetails(teenageRecords);
         }
+
+        /// <summary>
+        /// Retriving average age
+        /// </summary>
+        /// <param name="list"></param>
+        public static void RetriveAverageAge(List<Person> list) 
+        {
+            double age = list.Average(p => p.Age);
+            Console.WriteLine("Average Age is : " + age);
+        }
     }
 }

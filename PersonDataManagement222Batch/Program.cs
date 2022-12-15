@@ -21,6 +21,7 @@ namespace PersonDataManagement222Batch
                     PersonDataManager.GetAllRecordsBetween13To18Only(list);
                     break;
                 case 3:
+                    PersonDataManager.RetriveAverageAge(list);
                     break;
                 case 4:
                     break;

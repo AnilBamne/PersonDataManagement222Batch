@@ -39,5 +39,25 @@ namespace PersonDataManagement222Batch
             double age = list.Average(p => p.Age);
             Console.WriteLine("Average Age is : " + age);
         }
+
+        /// <summary>
+        /// Checking for specific person in the list by name
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="name"></param>
+        public static List<Person> SearchSpecificPerson(List<Person> list, string name)
+        {
+            var result = list.Where(p => p.Name == name).ToList();
+            if (result.Count != 0)
+            {
+                Console.WriteLine($"\n{name} is Present in the List");
+                return result;
+            }
+            else
+            {
+                Console.WriteLine($"\n{name} is Not present in the List");
+                return default;
+            }
+        }
     }
 }
